@@ -1,0 +1,188 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "b7005ae3-2fbe-4db1-8c6a-77723959e957": {
+        "id": "b7005ae3-2fbe-4db1-8c6a-77723959e957",
+        "parent": null,
+        "name": "NoCodeInState",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "f9cec135-ff23-4768-bb7b-a3d4304ab15a",
+          "0d49b508-bfc3-4ce7-b03d-20d2a7b14a11"
+        ],
+        "isRemovable": false,
+        "filePath": "NoCodeInState"
+      },
+      "f9cec135-ff23-4768-bb7b-a3d4304ab15a": {
+        "id": "f9cec135-ff23-4768-bb7b-a3d4304ab15a",
+        "parent": "b7005ae3-2fbe-4db1-8c6a-77723959e957",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "NoCodeInState/lambda.js",
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "0d49b508-bfc3-4ce7-b03d-20d2a7b14a11": {
+        "id": "0d49b508-bfc3-4ce7-b03d-20d2a7b14a11",
+        "parent": "b7005ae3-2fbe-4db1-8c6a-77723959e957",
+        "name": "sub",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "c7ddf290-690b-4a4e-a623-49af2e283bd4",
+          "107d1f9c-eda6-4b28-bcd9-1c55fa4fcb91"
+        ],
+        "isRemovable": true,
+        "filePath": "NoCodeInState/sub"
+      },
+      "c7ddf290-690b-4a4e-a623-49af2e283bd4": {
+        "id": "c7ddf290-690b-4a4e-a623-49af2e283bd4",
+        "parent": "0d49b508-bfc3-4ce7-b03d-20d2a7b14a11",
+        "name": "MyFunctionPy.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "NoCodeInState/sub/MyFunctionPy.py",
+        "config": {
+          "runtime": "python2.7",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "107d1f9c-eda6-4b28-bcd9-1c55fa4fcb91": {
+        "id": "107d1f9c-eda6-4b28-bcd9-1c55fa4fcb91",
+        "parent": "0d49b508-bfc3-4ce7-b03d-20d2a7b14a11",
+        "name": "__init__.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "NoCodeInState/sub/__init__.py"
+      }
+    },
+    "rootNode": "b7005ae3-2fbe-4db1-8c6a-77723959e957",
+    "openFiles": [
+      "f9cec135-ff23-4768-bb7b-a3d4304ab15a",
+      "c7ddf290-690b-4a4e-a623-49af2e283bd4",
+      "107d1f9c-eda6-4b28-bcd9-1c55fa4fcb91"
+    ],
+    "currentFileId": "f9cec135-ff23-4768-bb7b-a3d4304ab15a",
+    "resources": {
+      "ddbShop": {
+        "name": "ddbShop",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 1,
+          "operation": "get",
+          "table": {
+            "arn": "arn:aws:dynamodb:us-east-1:318300609668:table/Shop",
+            "name": "Shop",
+            "partitionKey": "Color",
+            "partitionKeyType": "S",
+            "hasSortKey": false,
+            "sortKey": "",
+            "sortKeyType": "S",
+            "payPerRequest": true,
+            "mode": 1
+          },
+          "isGlobalEditMode": false,
+          "parameters": {
+            "Key": {
+              "Color": "123"
+            },
+            "Item": {},
+            "ExpressionAttributeValues": {}
+          },
+          "triggerParams": {},
+          "validator": {
+            "validatableFields": {},
+            "validity": true
+          },
+          "valid": true
+        }
+      },
+      "snsusEast1TestSNS": {
+        "name": "snsusEast1TestSNS",
+        "type": "SNS",
+        "config": {
+          "topicMode": 1,
+          "topicName": "TestSNS",
+          "topicArn": "arn:aws:sns:us-east-1:318300609668:TestSNS",
+          "topicRegion": "us-east-1",
+          "snsType": 0,
+          "subscriptions": []
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      },
+      {
+        "lambdaId": "c7ddf290-690b-4a4e-a623-49af2e283bd4",
+        "varKey": "PYTHONPATH",
+        "varValue": "/var/runtime:/var/task/NoCodeInState/sub",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "boto3": {
+          "name": "boto3",
+          "language": "python",
+          "version": "1.9.6",
+          "dev": true,
+          "notRemovable": false
+        },
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "javascript",
+          "version": "2.176.0",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "NoCodeInState",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1576574388159
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "NoCodeInState",
+      "url": "https://github.com/zgma-test/NoCodeInState"
+    }
+  }
+}
